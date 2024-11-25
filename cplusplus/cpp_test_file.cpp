@@ -105,3 +105,12 @@ std::string random_alphabets(int length) {
 
     return result;
 }
+
+void print_permutations(std::string str) {
+    // Sort the string to ensure lexicographic order
+    std::sort(str.begin(), str.end());
+    
+    do {
+        std::cout << str << std::endl;
+    } while (std::next_permutation(str.begin(), str.end()));
+}
